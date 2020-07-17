@@ -5,7 +5,6 @@
 
 chrome.alarms.onAlarm.addListener(function() {
   chrome.browserAction.setBadgeText({text: ''});
-  chrome.tts.speak('Times up. Back to reality');
   chrome.notifications.create({
       type:     'basic',
       iconUrl:  'clock.png',
@@ -15,7 +14,7 @@ chrome.alarms.onAlarm.addListener(function() {
         {title: 'Stop Repeat Alarm'}
       ],
       priority: 0});
-  
+      chrome.tts.speak('Times up. Back to reality'); 
 });
 
 
